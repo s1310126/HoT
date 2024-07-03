@@ -1,10 +1,13 @@
 import java.util.*;
 public class HeadTail{
     public static void main(String[] args){
-        cointoss();
+        int result;
+        result = cointoss();
+        if(result == 1) System.out.println("You won!");
+        else System.out.println("You lost.");
     }
 
-    static void cointoss(){
+    static int cointoss(){
         int h=0, t=0; 
         Random rand = new Random();
         System.out.println("Tossing a coin...");
@@ -20,5 +23,7 @@ public class HeadTail{
             }
         }
         System.out.printf("Heads: %d, Tails: %d\n",h,t);
+        if(h > t) return 1;
+        return 0;
     } 
 }
