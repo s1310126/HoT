@@ -1,8 +1,17 @@
 import java.util.*;
 public class HeadTail{
     public static void main(String[] args){
+        greet();
         cointoss();
     }
+
+    static void greet(){
+        String name;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Who are you?");
+        name = sc.nextLine();
+        System.out.println("Hello, " + name + "!");
+    } 
 
     static void cointoss(){
         int h=0, t=0; 
